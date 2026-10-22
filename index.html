@@ -2014,7 +2014,7 @@ select.inp {
   <div class="scr-body">
     <div class="q-title">Have you had any unexplained vaginal bleeding or spotting?</div>
     <div class="opts" id="opts-bleed">
-      <div class="opt" data-val="yes" onclick="pickOptTo(this,'vagBleed','yes',38)">
+      <div class="opt" data-val="yes" onclick="pickOptTo(this,'vagBleed','yes',43)">
         <div class="opt-radio"><div class="opt-radio-dot"></div></div>
         <div class="opt-txt"><div class="opt-main">Yes</div></div>
       </div>
@@ -2413,11 +2413,9 @@ function go(n) {
     hdr.style.display = 'block';
     // progress bar
     const pf = document.getElementById('pf');
-    if (n >= PROG_FIRST && n <= PROG_LAST) {
-      const pct = Math.round(((n - PROG_FIRST) / (PROG_LAST - PROG_FIRST)) * 100);
-      pf.style.width = Math.max(3, pct) + '%';
-    } else if (n > PROG_LAST) {
-      pf.style.width = '100%';
+    const PROG_MAP = {1:8, 3:15, 4:23, 5:31, 37:38, 39:46, 40:54, 41:62, 42:69, 43:77, 44:85, 45:92, 46:100};
+    if (PROG_MAP.hasOwnProperty(n)) {
+      pf.style.width = PROG_MAP[n] + '%';
     }
   }
 
@@ -2805,7 +2803,7 @@ function toggleFaq(el) {
 <div class="scr" id="s51" style="padding:0;overflow:hidden;position:fixed!important;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;height:100dvh;z-index:500;background:#E8F5F0;">
 
   <!-- Top green section: logo + chip + headline -->
-  <div style="flex:1;min-height:0;display:flex;flex-direction:column;padding:28px 24px 8px;">
+  <div style="flex:0 0 auto;display:flex;flex-direction:column;padding:28px 24px 8px;">
 
     <!-- Logo -->
     <div style="display:flex;justify-content:center;margin-bottom:32px;">
@@ -2823,7 +2821,7 @@ function toggleFaq(el) {
   </div>
 
   <!-- White card — pinned to bottom -->
-  <div style="flex-shrink:0;background:#fff;border-radius:20px 20px 0 0;padding:32px 24px 48px;">
+  <div style="flex:1;background:#fff;border-radius:20px 20px 0 0;padding:32px 24px 48px;overflow-y:auto;">
 
     <!-- Checkmark row -->
     <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:36px;">
