@@ -351,7 +351,8 @@ select.inp {
   width: 100%;
   height: 56px;
   padding: 0 20px;
-  background: #729D9B;
+  background: #193231;
+  margin-bottom: 20px;
   color: #fff;
   border: none;
   border-radius: 100px;
@@ -363,6 +364,10 @@ select.inp {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   letter-spacing: -0.2px;
+}
+.btn:disabled {
+  background: #729D9B;
+  cursor: default;
 }
 .btn:active:not(:disabled) { opacity: 0.82; transform: scale(0.98); }
 .btn:disabled { opacity: 0.32; cursor: not-allowed; }
@@ -2170,7 +2175,7 @@ select.inp {
 
   <!-- Continue button pinned at bottom -->
   <div style="position:absolute;bottom:0;left:0;right:0;z-index:3;padding:16px 20px 32px;">
-    <button class="btn" onclick="go(48)" style="background:#1E3A2F;color:#fff;border:none;">Continue</button>
+    <button class="btn" onclick="go(48)" style="background:#193231;color:#fff;border:none;">Continue</button>
   </div>
 
 </div>
@@ -2838,7 +2843,7 @@ function toggleFaq(el) {
     </div>
 
     <!-- Continue button -->
-    <button class="btn" onclick="go(52)" style="background:#1E3A2F;color:#fff;border:none;">Continue</button>
+    <button class="btn" onclick="go(52)" style="background:#193231;color:#fff;border:none;">Continue</button>
 
   </div>
 
@@ -3040,7 +3045,7 @@ function toggleFaq(el) {
   </div>
 
   <div class="scr-foot" style="border-top:1px solid #E4E2DB;background:#fff;">
-    <button class="btn" onclick="go(53)" style="background:#1E3A2F;color:#fff;border:none;">Continue</button>
+    <button class="btn" onclick="go(53)" style="background:#193231;color:#fff;border:none;">Continue</button>
   </div>
 
 </div>
@@ -3062,7 +3067,7 @@ function toggleFaq(el) {
   <!-- CTA buttons -->
   <div style="padding:0 24px 44px;width:100%;">
     <button
-      style="width:100%;height:56px;background:#1E3A2F;color:#fff;border:none;border-radius:100px;font-family:inherit;font-size:17px;font-weight:700;cursor:pointer;margin-bottom:12px;letter-spacing:-0.2px;"
+      style="width:100%;height:56px;background:#193231;color:#fff;border:none;border-radius:100px;font-family:inherit;font-size:17px;font-weight:700;cursor:pointer;margin-bottom:12px;letter-spacing:-0.2px;"
       onclick="go(39)">I'm interested in prevention</button>
     <button
       style="width:100%;height:56px;background:transparent;color:#1E3A2F;border:2px solid #1E3A2F;border-radius:100px;font-family:inherit;font-size:16px;font-weight:600;cursor:pointer;"
